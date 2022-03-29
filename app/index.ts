@@ -21,5 +21,5 @@ app.get('/',
 
 app.listen(port,
            () => {
-               console.log(`⚡️[server]: Ss is running at https://localhost:${port}`);
+               console.log(`⚡️[ssss]: Ss is running at https://localhost:${port}`);
            });
