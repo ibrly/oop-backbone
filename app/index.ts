@@ -4,7 +4,7 @@ import express, {
     Response
 } from 'express';
 import dotenv from 'dotenv';
-import {FiveImpl} from './inheritance/FiveImpl';
+import {FiveImpl} from './relationships/inheritance/FiveImpl';
 
 dotenv.config();
 

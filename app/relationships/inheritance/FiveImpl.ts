@@ -3,8 +3,9 @@ import Five from './Five';
 export class FiveImpl extends Five {
     aaaa() {
         super.aaaa();
-        console.log('oovvrrride')
+        console.log('Override')
     }
+
     constructor(
         e: number,
         b: number
