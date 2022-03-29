@@ -23,8 +23,3 @@ app.listen(port,
            () => {
                console.log(`⚡️[server]: Ss is running at https://localhost:${port}`);
            });
-
-
-let x = new FiveImpl(3,
-                     6)
-x.aaaa()
