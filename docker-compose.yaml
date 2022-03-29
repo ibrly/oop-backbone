@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  backend:
+    build: ./app
+    ports:
+      - '1000:1000'
+    volumes:
+      - ./logs:/app/logs
+      - ./app:/app
+    env_file:
+      - ./env/app.env
+
