@@ -1,4 +1,4 @@
-import Count from './interface/Count';
+import Count from './Count';
 
 export default class Third implements Count {
     //whenever you implement interface you need to implement add functions

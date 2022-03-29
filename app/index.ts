@@ -4,8 +4,6 @@ import express, {
     Response
 } from 'express';
 import dotenv from 'dotenv';
-import First from './class/First';
-import Second from './Second';
 import {FiveImpl} from './inheritance/FiveImpl';
 
 dotenv.config();
@@ -26,10 +24,7 @@ app.listen(port,
                console.log(`⚡️[server]: Ss is running at https://localhost:${port}`);
            });
 
-let ex: Second = new Second(12,
-                            '55',
-                            12)
-ex.greetings()
+
 let x = new FiveImpl(3,
                      6)
 x.aaaa()
