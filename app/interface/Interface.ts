@@ -1,4 +1,4 @@
-export default interface Count {
+export default interface Interface {
     increase(number: number): void;
 
     decrease(number: number): void;
