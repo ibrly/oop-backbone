@@ -1,4 +1,4 @@
-export default abstract class Abs {
+export default abstract class Abstraction {
     //is way to give a guideline to other developers in abstraction to show up the class members and functionality
     //can use member field
     //can use access modifier

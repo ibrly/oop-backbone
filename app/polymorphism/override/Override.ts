@@ -1,6 +1,6 @@
-import Abs from '../../abstraction/abs';
+import Abstraction from '../../abstraction/Abstraction';
 
-export default class Override extends Abs {
+export default class Override extends Abstraction {
     gotten(): void {
     }
 
