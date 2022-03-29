@@ -1,12 +1,11 @@
-import Abs from './abs';
+import Abs from '../abstraction/abs';
 
-export default class Four extends Abs {
+export default class Override extends Abs {
     gotten(): void {
     }
 
     ssss(): void {
     }
-
 
 
     hell: string = '';

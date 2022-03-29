@@ -1,4 +1,4 @@
-import First from './First';
+import First from './class/First';
 
 export default class Second extends First {
     constructor(

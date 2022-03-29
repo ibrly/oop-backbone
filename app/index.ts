@@ -4,9 +4,9 @@ import express, {
     Response
 } from 'express';
 import dotenv from 'dotenv';
-import First from './First';
+import First from './class/First';
 import Second from './Second';
-import {FiveImpl} from './FiveImpl';
+import {FiveImpl} from './inheritance/FiveImpl';
 
 dotenv.config();
 
