@@ -3,11 +3,11 @@ export default abstract class Abstraction {
     //can use member field
     //can use access modifier
     //all abs methods must be implemented in derived class
-    private name: string = 's';
+    protected unit: string = 'cm';
 
-    public abstract gotten(): void
+    public abstract area(): number
 
-    public abstract ssss(): void
+    public abstract describe(): string
 
-    abstract hell: string
+    abstract label: string
 }
