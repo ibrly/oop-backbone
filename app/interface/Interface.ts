@@ -1,9 +1,9 @@
 export default interface Interface {
-    increase(number: number): void;
+    increase(by: number): void;
 
-    decrease(number: number): void;
+    decrease(by: number): void;
 
-    lessThan(number: number): void;
+    lessThan(value: number): boolean;
 
-    greaterThan(number: number): void;
+    greaterThan(value: number): boolean;
 }
