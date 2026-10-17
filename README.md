@@ -13,6 +13,7 @@ Object-oriented programming concepts in TypeScript, with a minimal Express + Typ
 | Polymorphism (override) | [app/polymorphism/override/Override.ts](app/polymorphism/override/Override.ts) | overriding members of a base class without changing their signature |
 | Polymorphism (overload) | [app/polymorphism/overload/Overload.ts](app/polymorphism/overload/Overload.ts) | overload signatures sharing one implementation that narrows its arguments |
 | Inheritance | [app/relationships/inheritance](app/relationships/inheritance) | `Dog` extends `Animal`, calls `super()` and overrides `speak()` |
+| Composition | [app/relationships/composition/Car.ts](app/relationships/composition/Car.ts) | a `Car` has an `Engine` it delegates to, and the engine can be swapped at runtime |
 
 ## Running
 
