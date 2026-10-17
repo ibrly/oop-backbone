@@ -11,6 +11,7 @@ Object-oriented programming concepts in TypeScript, with a minimal Express + Typ
 | Abstraction | [app/abstraction/Abstraction.ts](app/abstraction/Abstraction.ts) | `abstract` classes whose abstract members must be implemented by subclasses (a circle in `Override.ts`) |
 | Interfaces | [app/interface/Interface.ts](app/interface/Interface.ts), [Counter.ts](app/interface/Counter.ts) | declaring a contract and implementing it |
 | Polymorphism (override) | [app/polymorphism/override/Override.ts](app/polymorphism/override/Override.ts) | overriding members of a base class without changing their signature |
+| Polymorphism (overload) | [app/polymorphism/overload/Overload.ts](app/polymorphism/overload/Overload.ts) | overload signatures sharing one implementation that narrows its arguments |
 | Inheritance | [app/relationships/inheritance](app/relationships/inheritance) | `Dog` extends `Animal`, calls `super()` and overrides `speak()` |
 
 ## Running

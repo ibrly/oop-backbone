@@ -8,6 +8,7 @@ import First from './class/First';
 import Encapsulation from './encapsulation/Encapsulation';
 import Counter from './interface/Counter';
 import Override from './polymorphism/override/Override';
+import Formatter from './polymorphism/overload/Overload';
 import Dog from './relationships/inheritance/Dog';
 
 dotenv.config();
@@ -35,12 +36,14 @@ app.get('/concepts',
         const counter = new Counter();
         counter.increase(5);
         counter.decrease(2);
+        const formatter = new Formatter();
 
         res.json({
             class        : {age: person.age}, // _name is protected, so only subclasses can read it
             encapsulation: encapsulated.member,
             interface    : {value: counter.value, greaterThan2: counter.greaterThan(2)},
             abstraction  : new Override(2).describe(),
+            overload     : [formatter.format(Math.PI), formatter.format(new Date(Date.UTC(2024, 0, 15))), formatter.format([1, 2.5], ' | ')],
             inheritance  : new Dog('Rex').speak()
         });
     });
