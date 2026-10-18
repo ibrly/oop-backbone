@@ -12,6 +12,7 @@ import Formatter from './polymorphism/overload/Overload';
 import Dog from './relationships/inheritance/Dog';
 import Car, {ElectricEngine, PetrolEngine} from './relationships/composition/Car';
 import {ReportFormatter, ReportSender, SalesReport} from './solid/SingleResponsibility';
+import {AmountOffAbove, Checkout, PercentOff} from './solid/OpenClosed';
 
 dotenv.config();
 
@@ -53,7 +54,10 @@ app.get('/concepts',
             overload     : [formatter.format(Math.PI), formatter.format(new Date(Date.UTC(2024, 0, 15))), formatter.format([1, 2.5], ' | ')],
             inheritance  : new Dog('Rex').speak(),
             composition  : [beforeSwap, car.drive()],
-            solid        : {singleResponsibility: sender.outbox}
+            solid        : {
+                singleResponsibility: sender.outbox,
+                openClosed          : [120, 80].map(total => new Checkout([new PercentOff(10), new AmountOffAbove(100, 15)]).price(total))
+            }
         });
     });
 

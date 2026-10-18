@@ -15,6 +15,7 @@ Object-oriented programming concepts in TypeScript, with a minimal Express + Typ
 | Inheritance | [app/relationships/inheritance](app/relationships/inheritance) | `Dog` extends `Animal`, calls `super()` and overrides `speak()` |
 | Composition | [app/relationships/composition/Car.ts](app/relationships/composition/Car.ts) | a `Car` has an `Engine` it delegates to, and the engine can be swapped at runtime |
 | SOLID: single responsibility | [app/solid/SingleResponsibility.ts](app/solid/SingleResponsibility.ts) | the report holds data; formatting and sending are separate classes |
+| SOLID: open/closed | [app/solid/OpenClosed.ts](app/solid/OpenClosed.ts) | new discount types plug into `Checkout` without editing it |
 
 ## Running
 
