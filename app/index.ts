@@ -11,6 +11,7 @@ import Override from './polymorphism/override/Override';
 import Formatter from './polymorphism/overload/Overload';
 import Dog from './relationships/inheritance/Dog';
 import Car, {ElectricEngine, PetrolEngine} from './relationships/composition/Car';
+import {ReportFormatter, ReportSender, SalesReport} from './solid/SingleResponsibility';
 
 dotenv.config();
 
@@ -41,6 +42,8 @@ app.get('/concepts',
         const car = new Car('Corolla', new PetrolEngine());
         const beforeSwap = car.drive();
         car.replaceEngine(new ElectricEngine());
+        const sender = new ReportSender();
+        sender.send(new ReportFormatter().asText(new SalesReport([120, 80, 50])));
 
         res.json({
             class        : {age: person.age}, // _name is protected, so only subclasses can read it
@@ -49,7 +52,8 @@ app.get('/concepts',
             abstraction  : new Override(2).describe(),
             overload     : [formatter.format(Math.PI), formatter.format(new Date(Date.UTC(2024, 0, 15))), formatter.format([1, 2.5], ' | ')],
             inheritance  : new Dog('Rex').speak(),
-            composition  : [beforeSwap, car.drive()]
+            composition  : [beforeSwap, car.drive()],
+            solid        : {singleResponsibility: sender.outbox}
         });
     });
 
