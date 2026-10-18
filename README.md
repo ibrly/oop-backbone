@@ -16,6 +16,7 @@ Object-oriented programming concepts in TypeScript, with a minimal Express + Typ
 | Composition | [app/relationships/composition/Car.ts](app/relationships/composition/Car.ts) | a `Car` has an `Engine` it delegates to, and the engine can be swapped at runtime |
 | SOLID: single responsibility | [app/solid/SingleResponsibility.ts](app/solid/SingleResponsibility.ts) | the report holds data; formatting and sending are separate classes |
 | SOLID: open/closed | [app/solid/OpenClosed.ts](app/solid/OpenClosed.ts) | new discount types plug into `Checkout` without editing it |
+| SOLID: Liskov substitution | [app/solid/LiskovSubstitution.ts](app/solid/LiskovSubstitution.ts) | a `Square` that extends `Rectangle` breaks callers; a shared `Shape` interface doesn't |
 
 ## Running
 

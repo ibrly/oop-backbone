@@ -13,6 +13,7 @@ import Dog from './relationships/inheritance/Dog';
 import Car, {ElectricEngine, PetrolEngine} from './relationships/composition/Car';
 import {ReportFormatter, ReportSender, SalesReport} from './solid/SingleResponsibility';
 import {AmountOffAbove, Checkout, PercentOff} from './solid/OpenClosed';
+import {Rectangle, Square, SquareAsRectangle, stretch} from './solid/LiskovSubstitution';
 
 dotenv.config();
 
@@ -56,7 +57,8 @@ app.get('/concepts',
             composition  : [beforeSwap, car.drive()],
             solid        : {
                 singleResponsibility: sender.outbox,
-                openClosed          : [120, 80].map(total => new Checkout([new PercentOff(10), new AmountOffAbove(100, 15)]).price(total))
+                openClosed          : [120, 80].map(total => new Checkout([new PercentOff(10), new AmountOffAbove(100, 15)]).price(total)),
+                liskov              : {rectangle: stretch(new Rectangle(1, 1)), squareAsRectangle: stretch(new SquareAsRectangle(1)), square: new Square(4).area()}
             }
         });
     });
