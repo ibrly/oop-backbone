@@ -15,6 +15,7 @@ import {ReportFormatter, ReportSender, SalesReport} from './solid/SingleResponsi
 import {AmountOffAbove, Checkout, PercentOff} from './solid/OpenClosed';
 import {Rectangle, Square, SquareAsRectangle, stretch} from './solid/LiskovSubstitution';
 import {BasicPrinter, OfficePrinter, printAll} from './solid/InterfaceSegregation';
+import {EmailNotifier, SignupService, SmsNotifier} from './solid/DependencyInversion';
 
 dotenv.config();
 
@@ -60,7 +61,8 @@ app.get('/concepts',
                 singleResponsibility: sender.outbox,
                 openClosed          : [120, 80].map(total => new Checkout([new PercentOff(10), new AmountOffAbove(100, 15)]).price(total)),
                 liskov              : {rectangle: stretch(new Rectangle(1, 1)), squareAsRectangle: stretch(new SquareAsRectangle(1)), square: new Square(4).area()},
-                interfaceSegregation: [...printAll(new BasicPrinter(), ['invoice']), new OfficePrinter().scan('receipt')]
+                interfaceSegregation: [...printAll(new BasicPrinter(), ['invoice']), new OfficePrinter().scan('receipt')],
+                dependencyInversion : [new SignupService(new EmailNotifier()).register('a@example.com'), new SignupService(new SmsNotifier()).register('+201000000000')]
             }
         });
     });
