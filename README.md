@@ -27,6 +27,8 @@ mkdir -p env && echo "PORT=1000" > env/app.env
 docker compose up --build
 ```
 
+Compose mounts `./app` into the container so edits reload, but `node_modules` comes from the image. After changing dependencies, run `docker compose up --build -V` to rebuild and replace that volume.
+
 Or locally:
 
 ```bash
