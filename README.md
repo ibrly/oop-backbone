@@ -17,6 +17,7 @@ Object-oriented programming concepts in TypeScript, with a minimal Express + Typ
 | SOLID: single responsibility | [app/solid/SingleResponsibility.ts](app/solid/SingleResponsibility.ts) | the report holds data; formatting and sending are separate classes |
 | SOLID: open/closed | [app/solid/OpenClosed.ts](app/solid/OpenClosed.ts) | new discount types plug into `Checkout` without editing it |
 | SOLID: Liskov substitution | [app/solid/LiskovSubstitution.ts](app/solid/LiskovSubstitution.ts) | a `Square` that extends `Rectangle` breaks callers; a shared `Shape` interface doesn't |
+| SOLID: interface segregation | [app/solid/InterfaceSegregation.ts](app/solid/InterfaceSegregation.ts) | small `Printer`/`Scanner` roles instead of one `Machine` a basic printer can't fully implement |
 
 ## Running
 
